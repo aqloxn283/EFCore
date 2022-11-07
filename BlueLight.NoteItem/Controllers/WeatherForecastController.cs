@@ -57,8 +57,8 @@ namespace BlueLight.NoteItem.Controllers
         public async Task<bool> AddBlogAndPost(BlogDto blog)
         {
            var blo1g=  await _noteContext.Blogs.AddAsync(new Blog() { Url = blog.Url });
-
-            await _noteContext.Posts.AddAsync(new Post() { Title = "title1", Content = "conetne1", Blog = blo1g.Entity });
+            await _noteContext.Posts.AddAsync(new Post() { Title = "title1", Content = "conetne1", Blog = blo1g.Entity });           
+            
             var result = _noteContext.SaveChanges() > 0;
             return result;
         }
@@ -84,6 +84,43 @@ namespace BlueLight.NoteItem.Controllers
 
             };
             _noteContext.Blogs.Add(blog);
+            var result = _noteContext.SaveChanges() > 0;
+            return result;
+        }
+
+        /// <summary>
+        /// 添加POST 同时保存博客
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("AddPostandBlog")]
+        public async Task<bool> AddPostandBlog()
+        {
+            var post = new Post() { Title = "title1", Content = "conetne1" };
+            var blog = new Blog() { Url = "url1" };
+            post.Blog = blog;
+            _noteContext.Posts.Add(post);
+            var result = _noteContext.SaveChanges() > 0;
+            return result;
+        }
+
+        [HttpGet]
+        [Route("DeletePost")]
+        public async Task<bool> DeletePost()
+        {
+            var post = _noteContext.Posts.FirstOrDefault(c => c.Title == "title1");
+                _noteContext.Posts.Remove(post);
+            var result = _noteContext.SaveChanges()>0;
+            return result;
+
+        }
+
+        [HttpPost]
+        [Route("DeleteBlog")]
+        public async Task<bool> DeleteBlog(string urls)
+        {
+            var bloe = _noteContext.Blogs.First(c => c.Url == urls);
+            _noteContext.Blogs.Remove(bloe);
             var result = _noteContext.SaveChanges() > 0;
             return result;
         }
