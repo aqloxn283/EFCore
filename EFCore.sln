@@ -3,7 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueLight.NoteItem", "BlueLight.NoteItem\BlueLight.NoteItem.csproj", "{D5A66498-0B5B-40AB-81A2-1E804EC39DB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlueLight.NoteItem", "BlueLight.NoteItem\BlueLight.NoteItem.csproj", "{D5A66498-0B5B-40AB-81A2-1E804EC39DB1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tools", "Tools\Tools.csproj", "{BF248355-65A3-4CFE-821D-67FD4AFCBD16}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "kafka", "kafka", "{D9D9B6CB-89D6-4195-86ED-2D32AB1E0683}"
+	ProjectSection(SolutionItems) = preProject
+		kafka\getting-started.properties = kafka\getting-started.properties
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "producer", "kafka\producer\producer.csproj", "{AC0229BD-6BE0-4A30-8E0C-37B299854926}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "consumer", "kafka\consumer\consumer.csproj", "{AA4248F2-A68F-43C4-BECF-9B233CAF1B79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +26,25 @@ Global
 		{D5A66498-0B5B-40AB-81A2-1E804EC39DB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5A66498-0B5B-40AB-81A2-1E804EC39DB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5A66498-0B5B-40AB-81A2-1E804EC39DB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF248355-65A3-4CFE-821D-67FD4AFCBD16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF248355-65A3-4CFE-821D-67FD4AFCBD16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF248355-65A3-4CFE-821D-67FD4AFCBD16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF248355-65A3-4CFE-821D-67FD4AFCBD16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC0229BD-6BE0-4A30-8E0C-37B299854926}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC0229BD-6BE0-4A30-8E0C-37B299854926}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC0229BD-6BE0-4A30-8E0C-37B299854926}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC0229BD-6BE0-4A30-8E0C-37B299854926}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA4248F2-A68F-43C4-BECF-9B233CAF1B79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA4248F2-A68F-43C4-BECF-9B233CAF1B79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA4248F2-A68F-43C4-BECF-9B233CAF1B79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA4248F2-A68F-43C4-BECF-9B233CAF1B79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AC0229BD-6BE0-4A30-8E0C-37B299854926} = {D9D9B6CB-89D6-4195-86ED-2D32AB1E0683}
+		{AA4248F2-A68F-43C4-BECF-9B233CAF1B79} = {D9D9B6CB-89D6-4195-86ED-2D32AB1E0683}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D11B1D88-22B5-4B3A-9D9C-60840096608F}

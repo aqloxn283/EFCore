@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "producer": {
+      "commandName": "Project",
+      "commandLineArgs": "D:\\workspace\\demo\\EFCore\\EFCore\\kafka\\getting-started.properties"
+    }
+  }
+}
