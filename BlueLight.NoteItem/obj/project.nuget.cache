@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "d2a33PNbG4O+bsHj+x/bv33cKJII5IX5Z+KVxx1gy75fd/Is//nNDVSGV1YQg9TZ0tczY/iYjHZpog3SlV/HNg==",
+  "dgSpecHash": "3FIXWYRfjqqyWgVgxFo663XK5enLylqLab5Np/zU1cirhbaGhnA6NUu9wYpoa66ywuQA3qQo5g/sWlZW7NlVXg==",
   "success": true,
   "projectFilePath": "D:\\workspace\\demo\\EFCore\\EFCore\\BlueLight.NoteItem\\BlueLight.NoteItem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\kysharp.sm.core\\1.0.1\\kysharp.sm.core.1.0.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
@@ -35,6 +36,7 @@
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\portable.bouncycastle\\1.8.10\\portable.bouncycastle.1.8.10.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\stenn.entityframeworkcore.relational\\6.4.40\\stenn.entityframeworkcore.relational.6.4.40.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\stenn.entityframeworkcore.sqlserver\\6.4.40\\stenn.entityframeworkcore.sqlserver.6.4.40.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\stenn.entityframeworkcore.staticmigrations\\6.4.40\\stenn.entityframeworkcore.staticmigrations.6.4.40.nupkg.sha512",

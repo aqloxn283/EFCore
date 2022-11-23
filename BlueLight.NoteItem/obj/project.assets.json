@@ -11,6 +11,18 @@
           "lib/netstandard2.0/Humanizer.dll": {}
         }
       },
+      "KYSharp.SM.Core/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Portable.BouncyCastle": "1.8.10"
+        },
+        "compile": {
+          "lib/netstandard2.0/KYSharp.SM.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/KYSharp.SM.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.5.0": {
         "type": "package",
         "compile": {
@@ -429,6 +441,15 @@
           }
         }
       },
+      "Portable.BouncyCastle/1.8.10": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
+        }
+      },
       "Stenn.EntityFrameworkCore.Relational/6.4.40": {
         "type": "package",
         "dependencies": {
@@ -755,6 +776,19 @@
             "rid": "win"
           }
         }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "KYSharp.SM.Core": "1.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
+        }
       }
     }
   },
@@ -773,6 +807,18 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "KYSharp.SM.Core/1.0.1": {
+      "sha512": "Ns0yhMLNhYVR6PJKiZ6LGi2MB4KnBl/L4lntvpiGZr5TOKEc9KOWoVED4XKP9By1G9TE9EOkZcLbcpa0xdBLMA==",
+      "type": "package",
+      "path": "kysharp.sm.core/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "kysharp.sm.core.1.0.1.nupkg.sha512",
+        "kysharp.sm.core.nuspec",
+        "lib/netstandard2.0/KYSharp.SM.dll"
       ]
     },
     "Microsoft.CSharp/4.5.0": {
@@ -1537,6 +1583,21 @@
         "version.txt"
       ]
     },
+    "Portable.BouncyCastle/1.8.10": {
+      "sha512": "XLhjNAwuVB9ynwn11l5K44eyozh8q6gFseTrlnLNttejimglX7+F9+vxh60LPjvA/DAt6fUdS43N3ah8K6eaWg==",
+      "type": "package",
+      "path": "portable.bouncycastle/1.8.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/BouncyCastle.Crypto.dll",
+        "lib/net40/BouncyCastle.Crypto.xml",
+        "lib/netstandard2.0/BouncyCastle.Crypto.dll",
+        "lib/netstandard2.0/BouncyCastle.Crypto.xml",
+        "portable.bouncycastle.1.8.10.nupkg.sha512",
+        "portable.bouncycastle.nuspec"
+      ]
+    },
     "Stenn.EntityFrameworkCore.Relational/6.4.40": {
       "sha512": "YWLg0LQjRuSCeWvyb7d1o+BelZQNMraPy7eh9xU+55Tznj148wzSrphNF8R9ewVJ8fR+kCeJV0u6f3lw8EuaFA==",
       "type": "package",
@@ -2161,13 +2222,19 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Tools/1.0.0": {
+      "type": "project",
+      "path": "../Tools/Tools.csproj",
+      "msbuildProject": "../Tools/Tools.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.10",
       "Stenn.EntityFrameworkCore.SqlServer >= 6.4.40",
-      "Swashbuckle.AspNetCore >= 6.2.3"
+      "Swashbuckle.AspNetCore >= 6.2.3",
+      "Tools >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2201,7 +2268,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\workspace\\demo\\EFCore\\EFCore\\Tools\\Tools.csproj": {
+              "projectPath": "D:\\workspace\\demo\\EFCore\\EFCore\\Tools\\Tools.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

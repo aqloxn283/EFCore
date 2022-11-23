@@ -3,6 +3,7 @@ using BlueLight.NoteItem.Models.Relationship;
 using BlueLight.NoteItem.Models.Relationship.Dto;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Tools;
 
 namespace BlueLight.NoteItem.Controllers
 {
@@ -131,6 +132,38 @@ namespace BlueLight.NoteItem.Controllers
         public async Task<List<Note>> GetNotes()
         {
             return await _noteContext.Notes.ToListAsync();
+        }
+
+
+        [HttpGet]
+        [Route("SM4ECBeEncrypt")]
+        public async Task<string> SM4ECBeEncrypt(string str)
+        {
+            return SM4Handler.SM4ECBeEncrypt(str);
+            
+        }
+        
+        [HttpGet]
+        [Route("SM4ECBeDecrypt")]
+        public async Task<string> SM4ECBeDecrypt(string str)
+        {
+            return SM4Handler.SM4ECBeDecrypt(str);
+        }
+
+
+        [HttpGet]
+        [Route("SM4CBCEncrypt")]
+        public async Task<string> SM4CBCEncrypt(string str)
+        {
+            return SM4Handler.SM4CBCEncrypt(str);
+
+        }
+
+        [HttpGet]
+        [Route("SM4CBCDecrypt")]
+        public async Task<string> SM4CBCDecrypt(string str)
+        {
+            return SM4Handler.SM4CBCDecrypt(str);
         }
 
 
